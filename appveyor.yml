@@ -1,0 +1,33 @@
+version: 0.1.{build}
+
+image: Visual Studio 2019
+
+environment:
+  CF-USERNAME:
+    secure: oriv4yD52p7YMGJ4HKXA4Q==
+  CF-API-KEY:
+    secure: 3wXhsrd3N9qouW0jRNW2oUnrErPC/lwUD4nbe400JncUBLhOObr+A8LTKjM8I0Nl
+    
+configuration: Release
+
+build_script:
+- cmd: dotnet publish -c Release Coderantine/Coderantine.csproj
+
+artifacts:
+- path: '\Coderantine\bin\Release\netcoreapp3.1\publish'
+  name: coderantine-ui
+  type: zip
+  
+deploy:
+- provider: AzureAppServiceZipDeploy
+  website: coderantine-ui
+  username: $coderantine-ui
+  password:
+    secure: BLN3bk7SlZlR2LfCK2+cdbwQ8L3cb/Y+5lqpzc9/TqceTbSCST6RVTtvHZgjAiFo3pZ+ESduUwiFZfqDzE2hnA==
+  async_deploy: false
+  
+  on:
+    branch: master
+    
+after_deploy:
+- cmd: 'curl -X POST "https://api.cloudflare.com/client/v4/zones/b191134f8a3aa81ca423d92de31ebf96/purge_cache" -H "X-Auth-Email: %CF-USERNAME%" -H "X-Auth-Key: %CF-API-KEY%" -H "Content-Type: application/json" --data "{\"purge_everything\":true}"'

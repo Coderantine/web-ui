@@ -1,0 +1,83 @@
+﻿@page
+@{
+    ViewData["Title"] = "Nerds";
+}
+
+<section>
+    <pre><code class="language-cs">// Token: 0x02000002 RID: 2
+.class public auto ansi beforefieldinit ConsoleApp1.Program
+	extends [System.Runtime]System.Object
+{
+	// Methods
+	// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
+	.method public hidebysig static 
+		void Main (
+			string[] args
+		) cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 8 (0x8) bytes
+		.maxstack 8
+		.entrypoint
+
+		/* (8,9)-(8,10) Program.cs */
+		/* 0x00000251 00           */ IL_0000: nop
+		/* (9,13)-(9,32) Program.cs */
+		/* 0x00000252 2802000006   */ IL_0001: call      void ConsoleApp1.Program::LearnProgramming()
+		/* 0x00000257 00           */ IL_0006: nop
+		/* (10,9)-(10,10) Program.cs */
+		/* 0x00000258 2A           */ IL_0007: ret
+	} // end of method Program::Main
+
+	// Token: 0x06000002 RID: 2 RVA: 0x00002059 File Offset: 0x00000259
+	.method public hidebysig static 
+		void LearnProgramming () cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 33 (0x21) bytes
+		.maxstack 8
+
+		/* (13,9)-(13,10) Program.cs */
+		/* 0x0000025A 00           */ IL_0000: nop
+		/* (14,13)-(18,16) Program.cs */
+		/* 0x0000025B 730B00000A   */ IL_0001: newobj    instance void [System.Diagnostics.Process]System.Diagnostics.ProcessStartInfo::.ctor()
+		/* 0x00000260 25           */ IL_0006: dup
+		/* 0x00000261 7201000070   */ IL_0007: ldstr     "<a target="_blank" href="https://twitch.com/coderantine">https://twitch.com/coderantine</a>"
+		/* 0x00000266 6F0C00000A   */ IL_000C: callvirt  instance void [System.Diagnostics.Process]System.Diagnostics.ProcessStartInfo::set_FileName(string)
+		/* 0x0000026B 00           */ IL_0011: nop
+		/* 0x0000026C 25           */ IL_0012: dup
+		/* 0x0000026D 17           */ IL_0013: ldc.i4.1
+		/* 0x0000026E 6F0D00000A   */ IL_0014: callvirt  instance void [System.Diagnostics.Process]System.Diagnostics.ProcessStartInfo::set_UseShellExecute(bool)
+		/* 0x00000273 00           */ IL_0019: nop
+		/* 0x00000274 280E00000A   */ IL_001A: call      class [System.Diagnostics.Process]System.Diagnostics.Process [System.Diagnostics.Process]System.Diagnostics.Process::Start(class [System.Diagnostics.Process]System.Diagnostics.ProcessStartInfo)
+		/* 0x00000279 26           */ IL_001F: pop
+		/* (19,9)-(19,10) Program.cs */
+		/* 0x0000027A 2A           */ IL_0020: ret
+	} // end of method Program::LearnProgramming
+
+	// Token: 0x06000003 RID: 3 RVA: 0x0000207B File Offset: 0x0000027B
+	.method public hidebysig specialname rtspecialname 
+		instance void .ctor () cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 8 (0x8) bytes
+		.maxstack 8
+
+		/* 0x0000027C 02           */ IL_0000: ldarg.0
+		/* 0x0000027D 280F00000A   */ IL_0001: call      instance void [System.Runtime]System.Object::.ctor()
+		/* 0x00000282 00           */ IL_0006: nop
+		/* 0x00000283 2A           */ IL_0007: ret
+	} // end of method Program::.ctor
+
+} // end of class ConsoleApp1.Program</code></pre>
+
+    <small>You are very close to finding dungeon entrance ;) </small>
+</section>
+
+
+@section Scripts {
+	<script src="~/js/nerds.js"></script>
+	<script>
+        console.log("Your entrance key: PGltZyBjbGFzcz0ibXktaW1hZ2UiIHNyYz0ifi9pbWcvc2NyZWVwcy5wbmciIGFsdD0iVEhJUyBJUyBOT1QgSlVTVCBJTUFHRSIgdGl0bGU9IlNjcmVlcHMg1a3VodWy1asg1bbVr9Wh1oAiPg");
+	</script>
+}

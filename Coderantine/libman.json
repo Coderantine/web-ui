@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "unpkg",
+      "library": "terminal.css@0.7.1",
+      "destination": "wwwroot/lib/terminal.css/",
+      "files": [
+        "dist/terminal.css",
+        "dist/terminal.min.css"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "bootstrap@4.4.1",
+      "destination": "wwwroot/lib/bootstrap/",
+      "files": [
+        "dist/css/bootstrap-grid.css",
+        "dist/css/bootstrap-grid.min.css"
+      ]
+    },
+    {
+      "library": "highlight.js@9.18.1",
+      "destination": "wwwroot/lib/highlight.js/",
+      "files": [
+        "highlight.min.js",
+        "languages/javascript.min.js",
+        "languages/cs.min.js"
+      ]
+    },
+    {
+      "library": "normalize@8.0.1",
+      "destination": "wwwroot/lib/normalize/"
+    },
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.js"
+      ]
+    },
+    {
+      "library": "clipboard.js@2.0.6",
+      "destination": "wwwroot/lib/clipboard.js/"
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "bootstrap-utilities@4.1.3",
+      "destination": "wwwroot/lib/bootstrap-utilities/",
+      "files": [
+        "bootstrap-utilities.css",
+        "bootstrap-utilities.min.css"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "rythm.js@2.2.5",
+      "destination": "wwwroot/lib/rythm.js/"
+    },
+    {
+      "library": "egg.js@1.0",
+      "destination": "wwwroot/lib/egg.js/"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+﻿:root {
+    --global-font-size: 15px;
+    --global-line-height: 1.4em;
+    --global-space: 10px;
+    --font-stack: monospace, serif;
+    --mono-font-stack: monospace, serif;
+    --background-color: #222233;
+    --page-width: 60em;
+    --font-color: #e8e9ed;
+    --invert-font-color: #222225;
+    --secondary-color: #a3abba;
+    --tertiary-color: #a3abba;
+    --primary-color: #a9cbff;
+    --error-color: #ff3c74;
+    --progress-bar-background: #3f3f44;
+    --progress-bar-fill: #a9cbff;
+    --code-bg-color: #3f3f44;
+    --input-style: solid;
+    --display-h1-decoration: none;
+}
+
+img {
+    width: inherit;
+}
+
+section {
+    padding-bottom: 20px;
+}
+
+.terminal-nav {
+    margin-bottom: 20px;
+}
+
+pre code a .hljs-string {
+    color: inherit;
+}
+
+pre code a .hljs-tag {
+    color: inherit;
+}
+
+.il-version {
+    float: right;
+    background-color: var(--background-color);
+}
+
+.my-logo {
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: var(--global-line-height);
+}
+
+.my-logo-text {
+}
+
+.image-text-box {
+    display: flex;
+    align-items: center;
+}
+
+.team-social-links-container {
+    bottom: 0;
+    position: absolute
+}
+
+.terminal-card {
+    height: 100%;
+}
+
+    .terminal-card:hover {
+        border-color: var(--primary-color);
+    }
+
+.my-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

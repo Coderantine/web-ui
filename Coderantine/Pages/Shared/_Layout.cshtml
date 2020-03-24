@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=”description” content="Քո անտվտանգությունը ամենակարևորն է մեզ համար։ Այնպես որ #staythefuckhome Ծրագրավորման գիտելիքները քեզ կփրկեն ցանկացած ապոկալիպսից, իհարկե միմիայն քո ստեղծած աշխարհում։ Միացեք մեր ստրիմերին միասին ստեղծելու այն։">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Ծրագրավորման Կարանտին" />
+    <meta property="og:description" content="Քո անտվտանգությունը ամենակարևորն է մեզ համար։ Այնպես որ #staythefuckhome Ծրագրավորման գիտելիքները քեզ կփրկեն ցանկացած ապոկալիպսից, իհարկե միմիայն քո ստեղծած աշխարհում։ Միացեք մեր ստրիմերին միասին ստեղծելու այն։" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://coderantine.com/" />
+    <meta property="og:site_name" content="Coderantine" />
+    <meta property="og:image" content="@Context.Request.Scheme://@Context.Request.Host@Url.Content("~/img/logo-square.png")"/>
+    <meta property="og:locale" content="hy_AM"/>
+
+    <meta name="twitter:title" content="Ծրագրավորման Կարանտին">
+    <meta name="twitter:description" content="Քո անտվտանգությունը ամենակարևորն է մեզ համար։ Այնպես որ #staythefuckhome Ծրագրավորման գիտելիքները քեզ կփրկեն ցանկացած ապոկալիպսից, իհարկե միմիայն քո ստեղծած աշխարհում։ Միացեք մեր ստրիմերին միասին ստեղծելու այն։">
+    <meta name="twitter:image" content="@Context.Request.Scheme://@Context.Request.Host@Url.Content("~/img/logo-square.png")">
+    <meta name="twitter:site" content="@@coderantine">
+    <meta name="twitter:creator" content="@@coderantine">
+    
+    <link rel="shortcut icon" href="~/img/logo-mini.png" />
+    <link rel="stylesheet" href="~/lib/normalize/normalize.min.css" />
+    <link rel="stylesheet" href="~/lib/terminal.css/dist/terminal.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-utilities/bootstrap-utilities.min.css" />
+    <link rel="stylesheet" href="~/css/custom.css" />
+
+    @await RenderSectionAsync("Styles", required: false)
+    <cache> </cache>
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+            <header class="terminal-logo">
+                <div class="logo terminal-prompt"><a asp-page="Index" class="no-style">Coderantine</a></div>
+            </header>
+            <nav class="terminal-menu">
+                <ul>
+                    <li><a is-active-route asp-page="Index" class="menu-item"><span>Տուն</span></a></li>
+                    <li><a is-active-route asp-page="AboutUs" class="menu-item"><span>Մեր Մասին</span></a></li>
+                    <li><a is-active-route asp-page="ContactUs" class="menu-item"><span>Կոնտակտներ</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        @RenderBody()
+
+        <footer>
+            <p>
+                Բոլոր իրավունքները պաշտպանված են: &copy; <a title="#staythefuckhome" href="https://coderantine.com/" target="_blank" rel="noopener noreferer">Coderantine</a> @DateTimeOffset.UtcNow.Year
+            </p>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/rythm.js/rythm.min.js"></script>
+    <script src="~/lib/egg.js/egg.min.js"></script>
+    <script src="~/lib/highlight.js/highlight.min.js"></script>
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
