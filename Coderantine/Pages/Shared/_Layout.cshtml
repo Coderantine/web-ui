@@ -45,6 +45,10 @@
                     <li><a is-active-route asp-page="Index" class="menu-item"><span>Տուն</span></a></li>
                     <li><a is-active-route asp-page="AboutUs" class="menu-item"><span>Մեր Մասին</span></a></li>
                     <li><a is-active-route asp-page="ContactUs" class="menu-item"><span>Կոնտակտներ</span></a></li>
+                    @if (Context.Request.Path == "/Nerds" || Context.Request.Path == "/WallofGlory")
+                    {
+                        <li><a is-active-route asp-page="WallofGlory" class="menu-item"><span>Wall of Glory</span></a></li>
+                    }
                 </ul>
             </nav>
         </div>
