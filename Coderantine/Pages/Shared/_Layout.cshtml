@@ -49,10 +49,10 @@
                     {
                         <li><a is-active-route asp-page="WallofGlory" class="menu-item"><span>Wall of Glory</span></a></li>
                     }
-                <li>
-                    <!-- Place this tag where you want the button to render. -->
-                    <a class="github-button" href="https://github.com/Coderantine/web-ui" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-show-count="true" aria-label="Star Coderantine/web-ui on GitHub">Star</a>
-                </li>
+                    <li>
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button" href="https://github.com/Coderantine/web-ui" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-show-count="true" aria-label="Star Coderantine/web-ui on GitHub">Star</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -71,6 +71,16 @@
     <script src="~/lib/highlight.js/highlight.min.js"></script>
     <script src="https://buttons.github.io/buttons.js"></script>
     <script src="~/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161947327-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161947327-1');
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
